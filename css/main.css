@@ -40,26 +40,22 @@ nav{
     padding: 6px 0;
     box-sizing:border-box;
 }
-nav .main-menu{
-    float:left;
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.main-menu{
+    display: flex;
+  
+    gap:37px;
 }
-nav .social-menu{
-    float:right;
-}
-nav ul li{
-    float:left;
-}
-nav ul:after{
-    content:'';
-    clear:both;
-    display: block;
-}
-nav .main-menu li{
-    margin-right: 37px;    
-}
-nav .social-menu li{
-    margin-left: 25px;
-}
+ .social-menu{
+    display: flex;
+
+    gap: 25px;
+ }
 nav .main-menu li a{
     color:#fff;
     text-transform: uppercase;
