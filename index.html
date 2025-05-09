@@ -10,7 +10,7 @@
 </head>
 <body>
 	<nav>
-		<div class="container ">
+		<div class="container">
 			<img src="images/menu-icon.png" alt="menu-icon" class="menu-icon">
 			<ul class="main-menu">
 				<li><a href="">home</a></li>
@@ -33,7 +33,7 @@
 
 	<section class="feature">
 		<h2 class="hidden">feature</h2>
-		<ul class="container ">
+		<ul class="container">
 			<li>
 				<a href="">
 					<img src="images/web.png" alt="web">
@@ -65,7 +65,7 @@
 	<section class="portfolio inner-pd">
 		<div class="container">
 			<h2 class="main-tt">Portfolio</h2>
-			<ul class="porfolio-list ">
+			<ul class="porfolio-list">
 
 				<li style="background-image:url(images/laptops.jpg);">
 					<div class="caption">
@@ -135,5 +135,22 @@
 			<p>&copy; copyright 2021, My Portfolio Designs</p>
 		</div>
 	</footer>
+	<script>
+		const menuIcon = document.querySelector('.menu-icon');
+		const mainMenu = document.querySelector('.main-menu');
+
+		menuIcon.addEventListener('click', () => {
+	
+			mainMenu.classList.toggle('active');
+
+
+		});
+		/*
+		window.addEventListener('resize', ()=>{
+			if (window.innerWidth > 600) {
+				mainMenu.style.display = 'block';
+			}
+		});*/
+	</script>
 </body>
 </html>

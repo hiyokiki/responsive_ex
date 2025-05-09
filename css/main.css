@@ -40,22 +40,19 @@ nav{
     padding: 6px 0;
     box-sizing:border-box;
 }
+nav > div{
+    display: flex;
+    justify-content: space-between;
+}
+nav .main-menu{
+    display: flex;
+    gap:35px;
+}
+nav .social-menu{
+    display: flex;
+    gap:25px;
+}
 
-.container{
-    display: flex;
-    justify-content: space-between;
-    
-}
-.main-menu{
-    display: flex;
-    justify-content: space-between;
-    gap:36px;
-}
- .social-menu{
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
- }
 nav .main-menu li a{
     color:#fff;
     text-transform: uppercase;
@@ -92,10 +89,9 @@ header h2{
     height:300px;
     border-right:1px solid #fff;
     box-sizing:border-box;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-   
 }
 .feature li:first-child{
     border-left:1px solid #fff;
@@ -103,7 +99,7 @@ header h2{
 .feature li a{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap:24px;
     align-items: center;
 }
 .feature li h3{
@@ -112,7 +108,6 @@ header h2{
     text-transform: uppercase;
     font-size: 20px;
     line-height: 20px;
-    
 }
 
 /* ----------- main content ---------- */
@@ -121,22 +116,17 @@ header h2{
 .portfolio {
     background: #dadada;
 }
-
 .porfolio-list{
     display: flex;
-    justify-content: space-between;
-    gap:20px
-    
+    gap:20px;
 }
 .porfolio-list li{
     width: 210px;
     height: 210px;
-    margin-right: 20px;
     background-repeat:no-repeat;
     background-position:center;
     position: relative;
 }
-
 .porfolio-list li .caption{
     position: absolute;
     left: 0;right: 0;bottom: 0;
@@ -148,7 +138,6 @@ header h2{
 }
 
 .porfolio-list li .caption h3{
-  
     font-size: 14px;
     line-height: 1;
     font-weight: bold;
@@ -229,4 +218,101 @@ address p a{
     line-height: 40px;
     color: #686868;
     font-size: 12px;
+}
+
+/* 반응형 */
+@media screen and (max-width:900px) {
+    .container{ 
+        width:100%;
+        padding-left: 14px;
+        padding-right: 14px;
+        box-sizing: border-box;
+    }
+    .porfolio-list{
+        gap:0;
+    }
+    .porfolio-list li {
+        width: 100%;
+    }    
+}
+
+
+@media (max-width: 600px) {
+    
+    .menu-icon{
+        display: block;
+    }
+    nav{
+        position:relative;
+        height: auto;
+        padding: 6px 0 0;
+    }
+    .social-menu{
+        position:absolute;
+        right: 15px;
+        top: 5px;
+    }
+    nav .container{
+        padding-right: 0;
+        padding-left: 0;
+    }
+    nav > div{
+        flex-direction: column;
+        align-items: start;
+    }
+    nav .main-menu{
+        background: #333;
+        flex-direction: column;
+        margin-top: 6px;
+        width: 100%;
+        gap:0;
+        padding-left: 14px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ;
+    }
+    nav .main-menu.active{
+        height: 160px;
+    }
+    nav .main-menu li a{
+        display: block;
+        line-height: 40px;
+    }
+    .feature .container{
+        padding: 0;
+    }
+    .feature ul{
+
+        flex-direction: column;
+        background: none;
+    }
+    .feature li{
+        height: 120px;
+        justify-content: start;
+        border-right: none;
+        border-bottom:1px solid #fff;
+        padding-left: 14px;
+        background: url(../images/feature-bg.jpg) no-repeat;
+    }
+    .feature li a{
+        flex-direction: row;
+    }
+    .feature li:first-child{
+        border-left: none;
+    }
+    .feature li:nth-child(2){
+        background-position: center ;
+    }
+    .feature li:last-child{
+        border: none;
+        background-position: right bottom;
+    }
+    .porfolio-list{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-contents {
+        display: flex ;
+        flex-direction: column;
+    }
 }
